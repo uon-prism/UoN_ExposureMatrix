@@ -1,5 +1,5 @@
 # UoN_ExposureMatrix
-Stata do-file that splits follow-up whenever a different exposure starts and stops, allowing counts of different exposures at a particular time to be calculted.
+Stata do-file that splits follow-up whenever a different exposure starts and stops, allowing counts of different exposures at a particular time to be calculated.
 
 The files in this repository were designed and written by researchers at the University of Nottingham. They were created for projects funded by the National Institute for Health and Care Research Nottingham Biomedical Research Centre. Any views expressed are those of the author(s) and not necessarily those of the NIHR or the Department of Health and Social Care.
 
