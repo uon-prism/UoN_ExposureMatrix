@@ -32,6 +32,10 @@ To use the code, first run "joinsplit.do" to define the program joinsplit. Then 
 
 **Description**
 
-**joinsplit** was written so that the number of overlapping prescriptions for different medicines at any one time could be counted. Part of this was allowing a minimum duration of overlap, e.g. the number of different medicines that overlapped for at least 14 days. **joinsplit** splits an individual's follow-up into different periods according to which exposures had active prescriptions at that time. It does this by splitting follow-up whenever a different exposure starts or existing exposure stops. The resulting dataset allows the user to calculate the number of different medicines (or other exposures of interest) were present at any of the periods of follow-up. Changing the value of the option **minoverlap** allows the user to specify the minimum overlap of interest. If **minoverlap**>1, the durations of the time windows in the final dataset should not be calculated as some days are dropped in the process. Furthermore, the final duration for each window may be <**minoverlap** - this is ok, the remaining records reflect the _total_ exposure time.
+**joinsplit** was written so that the number of overlapping prescriptions for different medicines at any one time could be counted. Part of this was allowing a minimum duration of overlap, e.g. the number of different medicines that overlapped for at least 14 days. **joinsplit** splits an individual's follow-up into different periods according to which exposures had active prescriptions at that time. It does this by splitting follow-up whenever a different exposure starts or existing exposure stops. The resulting dataset allows the user to calculate the number of different medicines (or other exposures of interest) were present at any of the periods of follow-up. Changing the value of the option **minoverlap** allows the user to specify the minimum overlap of interest. If **minoverlap**>1, the durations of the time windows in the final dataset should not be calculated as some days are dropped in the process. Furthermore, the final duration for each window may be less than **minoverlap** - this is ok, the remaining records reflect the _total_ exposure time.
 
+**Examples**
 
+`joinsplit, groupby(prodcode)`
+
+`joinsplit, groupby(drugnamecode formulation) minoverlap(14)`
